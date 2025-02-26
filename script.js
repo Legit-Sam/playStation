@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         try {
-            let response = await fetch("http://localhost:5000/send-email", {
+            let response = await fetch("https://playstation-qcoq.onrender.com/send-email", {
                 method: "POST",
                 body: formData,
             });

@@ -6,7 +6,13 @@ const cors = require("cors");
 const fs = require("fs");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://play-station-woad.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
+
 app.use(express.json());
 
 // Configure Multer for multiple file uploads
